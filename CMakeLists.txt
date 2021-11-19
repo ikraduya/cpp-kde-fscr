@@ -59,7 +59,7 @@ install(DIRECTORY ${PROJECT_SOURCE_DIR}/include/ DESTINATION include/${PROJECT_N
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
   if (BUILD_TESTS)
     # Set up tests
-    add_subdirectory(tests EXCLUDE_FROM_ALL)
+    add_subdirectory(tests)
     enable_testing()
   endif()
 endif()
