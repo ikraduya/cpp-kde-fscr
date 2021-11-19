@@ -57,9 +57,11 @@ install(DIRECTORY ${PROJECT_SOURCE_DIR}/include/ DESTINATION include/${PROJECT_N
 #                                   Build tests
 # --------------------------------------------------------------------------------
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+  # Set up tests
   if (BUILD_TESTS)
-    # Set up tests
-    add_subdirectory(tests EXCLUDE_FROM_ALL)
+    option(INSTALL_GMOCK "Install Googletest's GMock?" OFF)
+    option(INSTALL_GTEST "Install Googletest's GTest?" OFF)
+    add_subdirectory(tests)
     enable_testing()
   endif()
 endif()
