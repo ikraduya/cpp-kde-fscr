@@ -1,5 +1,7 @@
 # cpp-kde-fscr | C++ Kernel Density Estimation Library - From Scratch 
 
+![github CI status](https://github.com/ikraduya/cpp-kde-fscr/actions/workflows/ci.yml/badge.svg)
+
 **cpp-kde-fscr** is a header-only C++ library of [Kernel Density Estimation (KDE)](https://en.wikipedia.org/wiki/Kernel_density_estimation) functions created without any dependencies. This library is created From Scratch (fscr), literally. 
 
 In addition to provide a C++ library without dependencies, the **fscr** libraries are my attemp to make an easy-to-learn libraries for people who want to learn, especially, Kernel Density Estimation (KDE) code implementation from scratch.
