@@ -12,9 +12,9 @@ namespace {
   template<typename T=double>
   std::vector<T> linspace(double min_val, double max_val, size_t num) {
     std::vector<T> ret(num);
-    T interval = (max_val - min_val) / (num - 1);
-    for (int i=0; i<num; ++i) {
-      ret[i] = min_val + (interval * i);
+    T interval = static_cast<T>((max_val - min_val) / (num - 1));
+    for (size_t i=0; i<num; ++i) {
+      ret[i] = static_cast<T>(min_val + (interval * i));
     }
     return ret;
   }

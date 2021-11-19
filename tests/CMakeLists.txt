@@ -27,6 +27,9 @@ target_link_libraries(
   PRIVATE gtest_main ${PROJECT_NAME}
 )
 
+add_custom_target(tests)
+add_dependencies(tests ${TEST_MAIN})
+
 set_target_properties(${TEST_MAIN} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR})
 set_target_properties(
   ${TEST_MAIN}
