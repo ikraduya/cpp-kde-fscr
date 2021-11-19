@@ -1,8 +1,18 @@
 #ifndef FSCR_KDE_KERNELS_HPP
 #define FSCR_KDE_KERNELS_HPP
 
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32)
+
+#define M_PI   3.14159265358979323846
+#define M_PI_2 1.57079632679489661923
+#define M_PI_4 0.785398163397448309616
+#define M_2_PI 0.636619772367581343076
+
+#else
 #define _USE_MATH_DEFINES
+#endif
 #include <cmath>
+
 
 namespace fscr
 {

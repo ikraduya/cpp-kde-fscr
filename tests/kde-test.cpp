@@ -72,7 +72,7 @@ TEST(KDE_PDF, tc3EmptyDataFloat) {
 }
 
 TEST(KDE_PDF, tc4EmptyXDomainFloat) {
-  const std::vector<float> series{6.2, 5.1, 1.9, -0.4, -1.3, -2.1};
+  const std::vector<float> series{6.2f, 5.1f, 1.9f, -0.4f, -1.3f, -2.1f};
   const std::vector<float> x_domain{};
   const std::vector<double> y_pdf = fscr::KDE::pdf(series, x_domain);
 
@@ -97,7 +97,7 @@ TEST(KDE_PDF_KGaussianBScott, tc1NormalInput) {
 }
 
 TEST(KDE_PDF_KGaussianBScott, tc2NormalInputFloat) {
-  const std::vector<float> series{6.2, 5.1, 1.9, -0.4, -1.3, -2.1};
+  const std::vector<float> series{6.2f, 5.1f, 1.9f, -0.4f, -1.3f, -2.1f};
   const size_t num = 10;
   const std::vector<float> x_domain = linspace<float>(-7, 11, num);
   
@@ -132,7 +132,7 @@ TEST(KDE_PDF_KGaussianBSilverman, tc1NormalInput) {
 }
 
 TEST(KDE_PDF_KGaussianBSilverman, tc2NormalInputFloat) {
-  const std::vector<float> series{6.2, 5.1, 1.9, -0.4, -1.3, -2.1};
+  const std::vector<float> series{6.2f, 5.1f, 1.9f, -0.4f, -1.3f, -2.1f};
   const size_t num = 10;
   const std::vector<float> x_domain = linspace<float>(-7, 11, num);
   
@@ -166,7 +166,7 @@ TEST(KDE_PDF_KGaussianBCustom, tc1NormalInput) {
 }
 
 TEST(KDE_PDF_KGaussianBCustom, tc2NormalInputFloat) {
-  const std::vector<float> series{6.2, 5.1, 1.9, -0.4, -1.3, -2.1};
+  const std::vector<float> series{6.2f, 5.1f, 1.9f, -0.4f, -1.3f, -2.1f};
   const size_t num = 10;
   const std::vector<float> x_domain = linspace<float>(-7, 11, num);
   
@@ -200,7 +200,7 @@ TEST(KDE_PDF_KBoxCarBScott, tc1NormalInput) {
 }
 
 TEST(KDE_PDF_KBoxCarBScott, tc2NormalInputFloat) {
-  const std::vector<float> series{6.2, 5.1, 1.9, -0.4, -1.3, -2.1};
+  const std::vector<float> series{6.2f, 5.1f, 1.9f, -0.4f, -1.3f, -2.1f};
   const size_t num = 10;
   const std::vector<float> x_domain = linspace<float>(-7, 11, num);
   
@@ -234,7 +234,7 @@ TEST(KDE_PDF_KBoxCarBSilverman, tc1NormalInput) {
 }
 
 TEST(KDE_PDF_KBoxCarBSilverman, tc2NormalInputFloat) {
-  const std::vector<float> series{6.2, 5.1, 1.9, -0.4, -1.3, -2.1};
+  const std::vector<float> series{6.2f, 5.1f, 1.9f, -0.4f, -1.3f, -2.1f};
   const size_t num = 10;
   const std::vector<float> x_domain = linspace<float>(-7, 11, num);
   
@@ -269,7 +269,7 @@ TEST(KDE_PDF_KBoxCarBCustom, tc1NormalInput) {
 }
 
 TEST(KDE_PDF_KBoxCarBCustom, tc2NormalInputFloat) {
-  const std::vector<float> series{6.2, 5.1, 1.9, -0.4, -1.3, -2.1};
+  const std::vector<float> series{6.2f, 5.1f, 1.9f, -0.4f, -1.3f, -2.1f};
   const size_t num = 10;
   const std::vector<float> x_domain = linspace<float>(-7, 11, num);
   
@@ -304,7 +304,7 @@ TEST(KDE_PDF_KTriangularBScott, tc1NormalInput) {
 }
 
 TEST(KDE_PDF_KTriangularBScott, tc2NormalInputFloat) {
-  const std::vector<float> series{6.2, 5.1, 1.9, -0.4, -1.3, -2.1};
+  const std::vector<float> series{6.2f, 5.1f, 1.9f, -0.4f, -1.3f, -2.1f};
   const size_t num = 10;
   const std::vector<float> x_domain = linspace<float>(-7, 11, num);
   
@@ -339,7 +339,7 @@ TEST(KDE_PDF_KTriangularBSilverman, tc1NormalInput) {
 }
 
 TEST(KDE_PDF_KTriangularBSilverman, tc2NormalInputFloat) {
-  const std::vector<float> series{6.2, 5.1, 1.9, -0.4, -1.3, -2.1};
+  const std::vector<float> series{6.2f, 5.1f, 1.9f, -0.4f, -1.3f, -2.1f};
   const size_t num = 10;
   const std::vector<float> x_domain = linspace<float>(-7, 11, num);
   
@@ -374,7 +374,7 @@ TEST(KDE_PDF_KTriangularBCustom, tc1NormalInput) {
 }
 
 TEST(KDE_PDF_KTriangularBCustom, tc2NormalInputFloat) {
-  const std::vector<float> series{6.2, 5.1, 1.9, -0.4, -1.3, -2.1};
+  const std::vector<float> series{6.2f, 5.1f, 1.9f, -0.4f, -1.3f, -2.1f};
   const size_t num = 10;
   const std::vector<float> x_domain = linspace<float>(-7, 11, num);
   
