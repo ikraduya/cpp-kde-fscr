@@ -26,14 +26,6 @@ add_executable(${TEST_MAIN} ${TESTFILES})
 add_custom_target(tests)
 add_dependencies(tests ${TEST_MAIN})
 
-find_package(fmt)
-
-target_link_libraries(
-  ${TEST_MAIN}
-  PRIVATE gtest_main ${LIBRARY_NAME}
-  PRIVATE fmt::fmt
-)
-
 set_target_properties(${TEST_MAIN} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR})
 set_target_properties(
   ${TEST_MAIN}
