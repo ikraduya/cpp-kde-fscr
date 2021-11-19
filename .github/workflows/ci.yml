@@ -1,0 +1,50 @@
+name: CI-github-actions
+
+on: 
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+
+    strategy:
+      matrix:
+        toolchain:
+          - linux-gcc
+          - macos-clang
+          - windows-msvc
+        
+        include:
+          - toolchain: linux-gcc
+            os: ubuntu-latest
+            compiler: gcc
+          
+          - toolchain: macos-clang
+            os: macos-latest
+            compiler: clang
+
+          - toolchain: windows-msvc
+            os: windows-latest
+            compiler: msvc
+      
+    name: ${{ matrix.toolchain }}
+    runs-on: ${{ matrix.os }}
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Configure
+      run: cmake -S . -Bbuild -DBUILD_TESTS=1 -DCMAKE_INSTALL_PREFIX=virtlocal
+    
+    - name: Build with ${{ matrix.compiler }}
+      run: cmake --build build --target tests
+
+    - name: Test
+      working-directory: build
+      env:
+        CTEST_OUTPUT_ON_FAILURE: 1
+      run: ctest
+    
+    - name: Install
+      run: cmake --install build --prefix "virtlocal"
